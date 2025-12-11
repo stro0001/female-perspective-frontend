@@ -1,37 +1,21 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const roleVideoWrappers = document.querySelectorAll(".role-video-wrapper");
+/*Note: Find alle elementer med klassen .role-video-wrapper*/
 
-    roleVideoWrappers.forEach(function (wrapper) {
-        const video = wrapper.querySelector(".role-video");
-        const button = wrapper.querySelector(".play-button");
+const roleVideoWrappers = document.querySelectorAll(".role-video-wrapper");
 
-        if (!video || !button) {
-            return;
-        }
+roleVideoWrappers.forEach(function (wrapper) { /*Note: Gå igennem (forEach) hver enkelt wrapper (én video ad gangen)*/
+    const video = wrapper.querySelector(".role-video"); /*Note: Find video-elementet og play-knappen inde i kortet*/
+    const button = wrapper.querySelector(".play-button");
 
-        // Sørg for, at video ikke har kontroller før vi klikker
-        video.controls = false;
+    if (!video || !button) return; /*Note: (for sikkerhed) --> Hvis video eller knap mangler → spring over*/
 
-        function startVideo(event) {
-            if (event) {
-                event.preventDefault();
-                event.stopPropagation();
-            }
+    video.controls = false; /*Note: Slå kontroller fra i starten --> Videoen viser ikke pause/play før man klikker, men den store hvide cirkel-play-knap*/
 
-            // Tænd kontroller og start videoen
-            video.controls = true;
-            video.play();
+    function startVideo() {
+        video.controls = true; // Vis kontroller
+        video.play(); // Start videoen
+        button.style.display = "none"; // Skjul play-knappen
+    }
 
-            // Fjern vores store play-knap
-            button.style.display = "none";
-
-            // Vi behøver ikke flere klik-handlere efter start
-            wrapper.removeEventListener("click", startVideo);
-            button.removeEventListener("click", startVideo);
-        }
-
-        // Klik både på wrapper og på knappen starter video
-        wrapper.addEventListener("click", startVideo);
-        button.addEventListener("click", startVideo);
-    });
+    wrapper.addEventListener("click", startVideo); /*Når du klikker på kortet eller knappen --> kør startVideo()*/
+    button.addEventListener("click", startVideo);
 });
