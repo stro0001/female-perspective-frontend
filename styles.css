@@ -492,9 +492,9 @@ INFO
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    padding: 100px;
+    padding: 50px;
     color: rgb(0, 56, 168);
-    font-size: 10px;
+    font-size: 15px;
 }
 
 /*all titles for bias cases*/
@@ -523,7 +523,8 @@ INFO
 }
 
 .biascase3 {
-    background-color: rgba(217, 221, 255);
+    background-color: rgb(0, 56, 168);
+    color: white;
 }
 
 .biascase4 {
@@ -535,7 +536,8 @@ INFO
 }
 
 .biascase6 {
-    background-color: rgba(217, 221, 255);
+    background-color: rgb(0, 56, 168);
+    color: white;
 }
 
 .biascase7 {
