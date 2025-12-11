@@ -425,11 +425,11 @@ INFO
 
 /* Farver */
 .gender-icon.female {
-    background-image: url('pink-icon.png'); /* evt. SVG */
+    background-image: url('../photos/pink-icon.png'); /* evt. SVG */
 }
 
 .gender-icon.male {
-    background-image: url('grey-icon.png');
+    background-image: url('../photos/grey-icon.png');
 }
 
 
