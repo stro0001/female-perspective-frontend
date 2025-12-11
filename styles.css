@@ -993,13 +993,13 @@ INFO
 
 .p5  { top: 38%; left: 8%;  transform: rotate(-2deg); width: 300px; }
 .p6  { top: 41%; left: 32%; transform: rotate(4deg);  width: 250px; }
-.p7  { top: 43%; left: 57%; transform: rotate(-5deg); width: 250px; }
-.p8  { top: 40%; left: 78%; transform: rotate(3deg);  width: 180px; }
+.p7  { top: 43%; left: 57%; transform: rotate(0deg); width: 290px; }
+.p8  { top: 40%; left: 78%; transform: rotate(3deg);  width: 250px; }
 
-.p9  { top: 70%; left: 12%; transform: rotate(-3deg); width: 190px; }
-.p10 { top: 67%; left: 36%; transform: rotate(6deg);  width: 180px; }
-.p11 { top: 73%; left: 55%; transform: rotate(-4deg); width: 170px; }
-.p12 { top: 69%; left: 75%; transform: rotate(2deg);  width: 190px; }
+.p9  { top: 70%; left: 12%; transform: rotate(-3deg); width: 250px; }
+.p10 { top: 67%; left: 36%; transform: rotate(6deg);  width: 220px; }
+.p11 { top: 73%; left: 55%; transform: rotate(-4deg); width: 250px; }
+.p12 { top: 69%; left: 75%; transform: rotate(2deg);  width: 250px; }
 
 
 
