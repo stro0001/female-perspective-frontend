@@ -151,13 +151,13 @@ header punkter
 
 }
 
-.circle-container-frontpage1 h4,.circle-container-frontpage2 h4  {
+.circle-container-frontpage1 h4, .circle-container-frontpage2 h4 {
     font-weight: bold;
     font-size: 80px;
     line-height: 1.5;
 }
 
-.circle-container-frontpage1 h5, .circle-container-frontpage2 h5{
+.circle-container-frontpage1 h5, .circle-container-frontpage2 h5 {
     font-style: italic;
     font-size: 15px;
     display: flex;
@@ -359,7 +359,7 @@ INFO
 
 
 /*------INFO CHARTS STYLING----------*/
-#chart-title{
+#chart-title {
     display: flex;
     justify-content: center;
     padding-top: 30px;
@@ -371,14 +371,15 @@ INFO
     margin-right: 300px;
     margin-bottom: 100px;
 }
-.chart-container{
+
+.chart-container {
     display: flex;
     justify-content: space-between; /* lige afstand mellem charts */
-    gap: 20px;                       /* afstand mellem charts */
+    gap: 20px; /* afstand mellem charts */
     padding: 20px 100px 100px 100px;
     align-items: flex-start; /* top-alignment */
     border-radius: 12px;
-    flex-wrap: nowrap;               /* holder dem på én linje */
+    flex-wrap: nowrap; /* holder dem på én linje */
     overflow-x: auto;
 }
 
@@ -393,21 +394,23 @@ INFO
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 250px;       /* fast bredde */
+    width: 250px; /* fast bredde */
     min-width: 250px;
 }
+
 .chart-wrapper canvas {
     width: 100% !important;
     height: 100% !important; /* fylder hele wrapperen */
 }
 
-#admissionValue{   /*   adgangskvotient   */
+#admissionValue { /*   adgangskvotient   */
     font-size: 40px;
     color: deeppink;
     /*mangler en fed skrift og nok en font-weight der er høj også */
     padding-top: 40px;
 
 }
+
 .gender-grid {
     padding-top: 20px;
     display: grid;
@@ -436,6 +439,7 @@ INFO
 /* ------------------------------
    BIAS CASES
    ------------------------------ */
+
 .biascaseintro {
     display: flex;
     justify-content: flex-start;
@@ -454,6 +458,13 @@ INFO
     font-size: 20px;
     font-style: italic;
     font-weight: lighter;
+}
+
+.women-biascase {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 100px;
 }
 
 .why-are-women-necesary {
@@ -484,10 +495,48 @@ INFO
 .when-women-participate {
     background-color: rgba(166, 241, 160, 0.45);
 }
+
 .when-women-are-needed {
     background-color: rgba(246, 155, 155, 0.51);
 }
-/* all case-sections*/
+
+
+.biascasesh2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    color: rgb(0, 56, 168);
+}
+
+/* Universal layout for all bias cases */
+.biascase-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+}
+
+/* Text column */
+.biascase-text {
+    flex: 1;
+}
+
+/* Heading above paragraph */
+.biascase-text h3 {
+    margin-bottom: 15px;
+}
+
+/* Image column */
+.biascase-photo img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px; /* optional – remove if not needed */
+}
+
 .biascase1, .biascase2, .biascase3, .biascase4, .biascase5, .biascase6, .biascase7 {
     display: flex;
     justify-content: flex-start;
@@ -497,25 +546,9 @@ INFO
     font-size: 15px;
 }
 
-/*all titles for bias cases*/
-.allbiascases h3 {
-    color: rgb(0, 56, 168);
-    font-size: 25px;
-    margin-bottom: 20px;
-}
-
-.women-biascase {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin: 100px;
-}
-
-
-/*background colors for each case-section*/
+/* Backgrounds — keep these as they are */
 .biascase1 {
     background-color: #fcebf9;
-    display: flex;
 }
 
 .biascase2 {
@@ -544,6 +577,10 @@ INFO
     background-color: white;
 }
 
+.biascase-sources {
+    font-style: italic;
+    font-size: 12px;
+}
 
 /* ------------------------------
    TIMELINE
@@ -1007,7 +1044,7 @@ INFO
     color: black;
 }
 
-.uddannelser-liste li{
+.uddannelser-liste li {
     line-height: 1.5;
     padding: 2px;
 }
@@ -1016,15 +1053,33 @@ INFO
    OPSLAGSTAVLE
    ------------------------------ */
 
-/* ---- OPSLAGSTAVLE ---- */
+.messageboard-content{
+    margin-top: 100px;
+}
 
-.messageboard-all{
+.messageboard-title {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    color: rgb(0, 56, 168);
+}
+
+.messageboard-text {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    color: rgb(0, 56, 168);
+    font-size: 15px;
+}
+
+.messageboard-all {
 
     margin-bottom: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .messageboard {
     min-width: 1400px;
     min-height: 900px;
@@ -1050,22 +1105,28 @@ INFO
     font-style: italic;
     line-height: 2;
     background-color: #fff98c;
-    box-shadow: 0 6px 10px rgba(0,0,0,0.3);
-    border: 1px solid rgba(0,0,0,0.25);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.25);
     transform-origin: top center;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
 /* Hover-effekt */
 .postit:hover {
     transform: scale(1.07) rotate(0deg);
-    box-shadow: 0 12px 18px rgba(0,0,0,0.4);
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.4);
     z-index: 10;
 }
 
 
 /* Farveskift mellem post-its */
-.postit:nth-child(odd)  { background-color: #fff98c; }
-.postit:nth-child(even) { background-color: #ffc9e0; }
+.postit:nth-child(odd) {
+    background-color: #fff98c;
+}
+
+.postit:nth-child(even) {
+    background-color: #ffc9e0;
+}
 
 
 /* ---- TEGNESTIFTER ---- */
@@ -1076,8 +1137,8 @@ INFO
     position: absolute;
     top: -10px;
     left: calc(50% - 8px);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-    border: 2px solid rgba(255,255,255,0.7);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
 .red {
@@ -1086,23 +1147,89 @@ INFO
 
 
 /* ---- PLACERING AF DE 12 POST-ITS ---- */
-.p1  { top: 13%;  left: 10%; transform: rotate(-4deg); width: 190px; }
-.p2  { top: 15%; left: 30%; transform: rotate(3deg);  width: 250px; }
-.p3  { top: 17%;  left: 55%; transform: rotate(-7deg); width: 250px; }
-.p4  { top: 16%; left: 78%; transform: rotate(5deg);  width: 250px; }
+.p1 {
+    top: 13%;
+    left: 10%;
+    transform: rotate(-4deg);
+    width: 190px;
+}
 
-.p5  { top: 38%; left: 8%;  transform: rotate(-2deg); width: 300px; }
-.p6  { top: 41%; left: 32%; transform: rotate(4deg);  width: 250px; }
-.p7  { top: 43%; left: 57%; transform: rotate(0deg); width: 290px; }
-.p8  { top: 40%; left: 78%; transform: rotate(3deg);  width: 250px; }
+.p2 {
+    top: 15%;
+    left: 30%;
+    transform: rotate(3deg);
+    width: 250px;
+}
 
-.p9  { top: 70%; left: 12%; transform: rotate(-3deg); width: 250px; }
-.p10 { top: 67%; left: 36%; transform: rotate(6deg);  width: 220px; }
-.p11 { top: 73%; left: 55%; transform: rotate(-4deg); width: 250px; }
-.p12 { top: 69%; left: 75%; transform: rotate(2deg);  width: 250px; }
+.p3 {
+    top: 17%;
+    left: 55%;
+    transform: rotate(-7deg);
+    width: 250px;
+}
 
+.p4 {
+    top: 16%;
+    left: 78%;
+    transform: rotate(5deg);
+    width: 250px;
+}
 
+.p5 {
+    top: 38%;
+    left: 8%;
+    transform: rotate(-2deg);
+    width: 300px;
+}
 
+.p6 {
+    top: 41%;
+    left: 32%;
+    transform: rotate(4deg);
+    width: 250px;
+}
+
+.p7 {
+    top: 43%;
+    left: 57%;
+    transform: rotate(0deg);
+    width: 290px;
+}
+
+.p8 {
+    top: 40%;
+    left: 78%;
+    transform: rotate(3deg);
+    width: 250px;
+}
+
+.p9 {
+    top: 70%;
+    left: 12%;
+    transform: rotate(-3deg);
+    width: 250px;
+}
+
+.p10 {
+    top: 67%;
+    left: 36%;
+    transform: rotate(6deg);
+    width: 220px;
+}
+
+.p11 {
+    top: 73%;
+    left: 55%;
+    transform: rotate(-4deg);
+    width: 250px;
+}
+
+.p12 {
+    top: 69%;
+    left: 75%;
+    transform: rotate(2deg);
+    width: 250px;
+}
 
 
 /* ------------------------------
